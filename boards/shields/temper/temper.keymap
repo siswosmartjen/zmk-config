@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
 #define NUM 1
@@ -98,7 +99,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N        &kp M       &kp COMMA      &kp DOT      &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                   &kp LCTRL    &lt NAV TAB   &smart_shft       &kp ENTER  &lt NUM SPACE    &super_bspc
+                                   &kp LCTRL      &lt NAV   &smart_shft       &kp ENTER  &lt NUM SPACE    &super_bspc
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -114,12 +115,12 @@
                                     &trans        &trans        &trans          &trans        &trans          &kp N0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
-                };
+                };"
 
                 nav_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &trans        &trans        &trans        &trans        &trans            &bspc_del       &kp HOME      &kp END       &kp TAB     &super_bspc
+        &qmrk_excl        &trans        &sk LALT        &trans       &kp TAB             &bspc_del       &kp HOME      &kp END       &kp TAB     &super_bspc
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &sk LSHFT     &sk LCTRL      &sk LALT      &sk LGUI      &kp TAB           &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT       &quote_morph
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -133,9 +134,9 @@
                 fun_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &trans   &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG         &trans        &kp F7        &kp F8        &kp F9       &kp F12
+      &trans   &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG            &ext_power EP_ON        &kp F7        &kp F8        &kp F9       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans        &kp F4        &kp F5        &kp F6       &kp F11
+     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &ext_power EP_OFF     &kp F4        &kp F5        &kp F6       &kp F11
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &bt BT_CLR    &kp C_PREV     &kp C_PP     &kp C_NEXT      &trans            &trans        &kp F1        &kp F2        &kp F3       &kp F10
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
