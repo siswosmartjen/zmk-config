@@ -1,5 +1,5 @@
 file_format: "1"
-id: temper
+id: tempe
 name: Chocofi Temper
 type: shield
 url: https://github.com/raeedcho/chocofi-temper
@@ -11,5 +11,5 @@ features:
   - underglow
   - studio
 siblings:
-  - temper_left
-  - temper_right
+  - tempe_left
+  - tempe_right
