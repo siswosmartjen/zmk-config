@@ -17,3 +17,5 @@ include:
     shield: tempe_left
   - board: nice_nano_v2
     shield: tempe_right
+  - board: nice_nano_v2
+    shield: settings_reset
